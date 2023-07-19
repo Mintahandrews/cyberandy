@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-div {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #D3D3D3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.char span {
+    font-size: 60px;
+    padding: 0;
+    text-transform: uppercase;
+color: rgb(0, 0, 0);
+    animation: spark 4.5s linear infinite;
+    animation-delay: calc(200ms * var(--i));
+
+}
+
+@keyframes spark {
+    0%
+        -100% {
+            color: #000;
+            filter: blur(1px)
+            text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000,
+            0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000,
+            0 0 80px #000, 0 0 90px #000, 0 0 100px #000, 0 0 120px #000,
+        }  
+
+        5%, 95% { 
+                    filter: blur(0);
+                    color: white;
+                    text-shadow: none;
+                }
+}
+
